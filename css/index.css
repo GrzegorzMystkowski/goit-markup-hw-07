@@ -1,7 +1,146 @@
+/* responsywny design */
+nav{
+    display: none;
+}
+
+.header-contacts{
+    display: none;
+}
+@media screen and (min-width:768px) {
+    .container {
+        max-width:768px;
+      }
+    .header-hamburger{
+      display: none;
+    }
+    nav > .nav-header{
+        display: flex;
+    
+    }
+  }
+
+@media screen and (min-width:1200px){
+      .container {
+          max-width:1200px;
+      }
+  }
+  
+.header-hamburger {
+      background-color: transparent;
+      border: none;
+  }
+  
+.menu-container {
+      background-color: #fff;
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(100%);
+      transition: transform 250ms ease;
+  }
+  
+.menu-container-close-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: transparent;
+      border: none;
+  }
+  
+.mobile-contact{
+      display: flex;
+      flex-direction: column;
+  }
+  
+.menu-container.is-open {
+      transform: translateX(0);
+  }
+  
+.container{
+      max-width:480px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+  }
+  
+.mobile-menu{
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  }
+  
+.link{
+      margin-bottom: 36px;
+  }
+  
+.link:last-child{
+      padding-bottom:0;
+  }
+  
+.tel-mobile{
+  font-family: Roboto;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.68px;
+  margin-left: 40px;
+  }
+  
+.email-mobile{
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  margin-left: 40px;
+  }
+  
+.mobile-social-links{
+  color: #2196F3;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; 
+  letter-spacing: 0.36px;
+  border-right: 1px solid  rgba(33, 33, 33, 0.20);
+  padding:0 10px ;
+  }
+  
+.mobile-social-links:first-child{
+      padding-left:0;
+  }
+  
+.mobile-social-links:last-child{
+      border:none;
+      padding-right:0;
+  }
+  
+.mobile-socials{
+      margin-top: 64px;
+      margin-bottom: 48px;
+      display: flex;
+  }
+  
+  /* responsywny design */
+
 /* STYLE GLOBALNE STRONY */
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 header {
@@ -11,13 +150,11 @@ header {
 
 main {
     margin: 0 auto;
-    display: none;
 }
 
 footer {
     margin: 0 auto;
     background-color: #2f303a;
-    display: none;
 }
 
 a:hover,
@@ -103,7 +240,7 @@ img {
 
 .footer-wrapper {
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -150,7 +287,8 @@ img {
     line-height: 16px;
     color: #212121;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .studio-color {
@@ -158,16 +296,16 @@ img {
 }
 
 .main-header {
+    display: block;
     text-align: center;
     background-color: #2f303a;
     background-image: linear-gradient(#2f303a66, #2f303a66),
         url(../images/new_photo.jpg);
-    max-width: 100;
+    max-width: 100vw;
     height: 600px;
     background-size: cover;
     border: 1px solid #000000;
     color: #ffffff;
-    padding: 200px 452px 280px 452px;
     margin: 0 auto;
 }
 
@@ -304,10 +442,7 @@ img {
     margin: 0;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
+
 
 .nav-header {
     letter-spacing: 0.02em;
@@ -932,6 +1067,7 @@ img {
   .header-hamburger{
     display: none;
   }
+   
 }
 @media screen and (min-width:1200px){
     .container {
@@ -979,4 +1115,76 @@ img {
 .menu-container.is-open {
     transform: translateX(0);
 }
+
+.container{
+    max-width:480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.mobile-menu{
+font-family: Roboto;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.8px;
+}
+
+.link{
+    margin-bottom: 36px;
+}
+
+.link:last-child{
+    padding-bottom:0;
+}
+
+.tel-mobile{
+font-family: Roboto;
+font-size: 34px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.68px;
+margin-left: 40px;
+}
+
+.email-mobile{
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.48px;
+margin-left: 40px;
+}
+
+.mobile-social-links{
+color: #2196F3;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; 
+letter-spacing: 0.36px;
+border-right: 1px solid  rgba(33, 33, 33, 0.20);
+padding:0 10px ;
+}
+
+.mobile-social-links:first-child{
+    padding-left:0;
+}
+
+.mobile-social-links:last-child{
+    border:none;
+    padding-right:0;
+}
+
+.mobile-socials{
+    margin-top: 64px;
+    margin-bottom: 48px;
+    display: flex;
+}
+
 /* responsywny design */
