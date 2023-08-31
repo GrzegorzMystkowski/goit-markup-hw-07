@@ -1260,6 +1260,7 @@ height: 120px;
         padding: 25px 100px;
     }
     .section-what-we-do {
+        display: flex;
         margin: 50px 0 94px 0;
         padding-left: 0;
         display: flex;
